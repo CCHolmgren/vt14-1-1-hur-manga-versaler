@@ -15,7 +15,7 @@
             <asp:Label ID="Label1" runat="server" Text="" Visible="false"></asp:Label>
         </p>
         <p>
-        <asp:Button Text="Bestäm antalet versaler" runat="server" ID="SendButton" OnClick="SendButton_Click" />
+            <asp:Button Text="Bestäm antalet versaler" runat="server" ID="SendButton" OnClick="SendButton_Click" />
         </p>
     </form>
 </body>
