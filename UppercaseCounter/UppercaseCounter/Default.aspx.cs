@@ -14,12 +14,25 @@ namespace UppercaseCounter
 
         }
 
-        protected void SendButton_Click(object sender, EventArgs e)
+        protected void ResetButton_Click(object sender, EventArgs e)
+        {
+            UppercaseCount.Visible = false;
+            UppercaseInput.Text = "";
+            UppercaseInput.Enabled = true;
+            ResetButton.Visible = false;
+            CalculateButton.Visible = true;
+        }
+
+        protected void CalculateButton_Click(object sender, EventArgs e)
         {
             string inputText = UppercaseInput.Text;
             int numberOfCapitals = TextAnalyzer.GetNumberOfCapitals(inputText);
-            Label1.Text = "Texten innehåller " + numberOfCapitals.ToString() + " versaler";
-            Label1.Visible = true;
+
+            UppercaseCount.Text = "Texten innehåller " + numberOfCapitals.ToString() + " versaler";
+            UppercaseCount.Visible = true;
+            UppercaseInput.Enabled = false;
+            CalculateButton.Visible = false;
+            ResetButton.Visible = true;
         }
     }
 }
