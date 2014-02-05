@@ -11,5 +11,9 @@ namespace UppercaseCounter
         {
             return text.Count(c => char.IsUpper(c));
         }
+        static public int GetNumberOfLowercase(string text)
+        {
+            return text.Count(c => char.IsLower(c));
+        }
     }
 }
